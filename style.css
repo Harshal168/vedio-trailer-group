@@ -1,0 +1,66 @@
+body{
+    margin: 0;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    height:100vh;
+    align-items: center;
+    background-color: black;
+    color: white;
+}
+.container{
+    max-width: 400px;
+}
+img{
+    margin-bottom: 20px;
+    width: 400px;
+    height: 300px;
+}
+p{
+    padding: 5px;
+}
+.btn{
+    padding:5px 15px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+.btn:hover{
+    background-color: rgba(240, 255, 255, 0.386);
+
+}
+
+.active.vedio-container{
+    visibility: hidden;
+    opacity: 0;
+}
+.vedio-container{
+    position: fixed;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    background-color: black;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
+    transition: opacity .7s;
+}
+.vedio-container video{
+    position: relative;
+    max-width: 900px;
+    outline: none;
+}
+@media(max-width:991px){
+    .vedio-container video{
+        max-width: 90%;
+    }
+}
+.close-icon{
+    position: absolute;
+    top:30px;
+    right:30px;
+    color:white;
+    cursor: pointer;
+}
